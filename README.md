@@ -197,3 +197,9 @@ class EmailAddress(db.Model):
 - [Changing Attribute Behavior - SQLAlchemy][SQLAlchemy Validations]
 
 [SQLAlchemy Validations]: https://docs.sqlalchemy.org/en/14/orm/mapped_attributes.html
+
+<!-- # Write your MySQL query statement below
+SELECT p.product_id, IFNULL(ROUND(SUM(units*price)/SUM(units),2),0) AS average_price 
+from Prices p
+left join UnitsSold u
+on p.product_id = u.product_id AND u.purchase_date BETWEEN start_date and end_date group by product_id; -->
